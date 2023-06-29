@@ -8,7 +8,7 @@ console.log(videos)
     <section className="container">
         {videos.map(item=>
             
-            <img src={item.LImagen}/>
+            <img key={item.Titulo} src={item.LImagen}/>
             
             
             )}
