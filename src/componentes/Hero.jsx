@@ -12,7 +12,7 @@ function Hero(){
             <h3>Challenge React</h3>
             <p className="title_description">Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React.</p>
             </div>
-            <Image src="/thumbVideo.png" alt="thumb" width={646} height={333.58} />
+            <Image src="/thumbVideo.png" alt="thumb" width={446} height={233.58} />
             </section>
             <style jsx>{`
             .hero_controles{
@@ -30,7 +30,7 @@ function Hero(){
 
             .hero_container{
                 background-image: url(../hero.png);
-                width: 1440px;
+                width: 1280px;
                 height: 738px;
 
                 display:flex;

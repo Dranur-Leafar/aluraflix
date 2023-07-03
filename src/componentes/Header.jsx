@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button.jsx";
+import Link from 'next/link'
 
 function Header (props){
     return (
@@ -8,7 +9,7 @@ function Header (props){
   
   <Image src="/logo.png" alt="logo" width={168.5} height={40} />
   {props.boton&&
-  <Button text={"Nuevo Video"}/>}
+  <Link href="/AddVideo"> <Button text={"Nuevo Video"}/></Link>}
 
     <style jsx>
         {`

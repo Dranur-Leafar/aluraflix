@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { v4 as uuid } from 'uuid';
 
 
 function Button(props){
@@ -21,7 +22,7 @@ const manejarLimpiar=()=>{
     
     props.formulario ==="categoria"?
     (props.setdataForm({
-    
+    id:"",
     Nombre:"",
     Color:"",
     Descripción: "",
@@ -30,6 +31,7 @@ const manejarLimpiar=()=>{
 ):
 <>
 {props.setdataForm({
+    id:"",
     titulo:"",
     linkVideo:"",
     linkImagen:"",
@@ -48,6 +50,7 @@ const manejarLimpiar=()=>{
 const manejarGuardar = () => {
   if (props.formulario === "categoria") {
     const nuevaCategoria = {
+      id: uuid(),
       Nombre: props.dataForm.Nombre,
       Descripción: props.dataForm.Descripción,
       Color: props.dataForm.Color,
@@ -55,7 +58,7 @@ const manejarGuardar = () => {
     };
 
     props.setCategory([...category, nuevaCategoria]);
-    manejarLimpiar;
+    manejarLimpiar();
     console.log("Guardando datos categoria", props.dataForm);
     
   } else {
@@ -67,11 +70,11 @@ const manejarGuardar = () => {
 return (
     <>
       {props.text === "Nueva Categoria" ? (
-        <Link href="/AddVideo">
+        
          
             <button onClick={manejarBoton}>{props.text}</button>
         
-        </Link>
+        
       ) : (
         <button onClick={manejarBoton}>{props.text}</button>
       )}

@@ -1,13 +1,14 @@
 import FormInput from "@/componentes/FormInput"
 import Button from "@/componentes/Button"
 import React, { useState, useEffect } from 'react';
+import { v4 as uuid } from 'uuid';
 
 
 
 
 function FormCategory(props){
 const [dataForm, setdataForm]= useState({
-
+    id: uuid(),
     Nombre:"",
     Descripción:"",
     Color:"#000",

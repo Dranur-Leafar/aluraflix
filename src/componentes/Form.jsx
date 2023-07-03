@@ -1,13 +1,15 @@
 import FormInput from "@/componentes/FormInput"
 import Button from "@/componentes/Button"
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link'
 
 
 
 
 function Form(props){
 const [dataForm, setdataForm]= useState({
-
+    
+    
     titulo:"",
     linkVideo:"",
     linkImagen:"",
@@ -75,7 +77,7 @@ id="cSeguridad"
         <Button text="Limpiar" setdataForm={setdataForm}/>
     </div>
     <div className="nueva__categoria">
-        <Button text="Nueva Categoria" />
+      <Link href="/AddCategory"><Button text="Nueva Categoria"/></Link>
     </div>
 </div>
     <style jsx>{`

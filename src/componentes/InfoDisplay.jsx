@@ -12,6 +12,7 @@ const InfoDisplay=(props)=>{
 
         <TableRow
         category={props.category}
+        manejarEditar={props.manejarEditar}
         />
 
 </>)
